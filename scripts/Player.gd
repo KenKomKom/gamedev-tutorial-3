@@ -33,7 +33,7 @@ func get_input():
 		animatedAprite.flip_h=false
 		if Input.is_action_just_pressed("ui_right") and timer_dash_right>0:
 			print("dash")
-			velocity.x=speed*5
+			velocity.x=speed*10
 			
 	if Input.is_action_just_released("ui_right"):
 		print("release")
@@ -45,7 +45,7 @@ func get_input():
 		animatedAprite.flip_h=true
 		if Input.is_action_just_pressed("ui_left") and timer_dash_left>0:
 			print("dash")
-			velocity.x=speed*-5
+			velocity.x=speed*-10
 			
 	if Input.is_action_just_released("ui_left"):
 		print("release")
