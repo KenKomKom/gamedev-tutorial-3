@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2meta.app - Yeet Sound Effect (128 kbps).mp3-e4b738729508674f51f098d3c1b3d2f5.mp3str"
+
+[deps]
+
+source_file="res://assets/Y2meta.app - Yeet Sound Effect (128 kbps).mp3"
+dest_files=[ "res://.import/Y2meta.app - Yeet Sound Effect (128 kbps).mp3-e4b738729508674f51f098d3c1b3d2f5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

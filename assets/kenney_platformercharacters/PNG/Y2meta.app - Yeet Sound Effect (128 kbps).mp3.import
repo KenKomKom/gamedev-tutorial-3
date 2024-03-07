@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2meta.app - Yeet Sound Effect (128 kbps).mp3-74bebae4e60c38a42b0c5a20f2386069.mp3str"
+
+[deps]
+
+source_file="res://assets/kenney_platformercharacters/PNG/Y2meta.app - Yeet Sound Effect (128 kbps).mp3"
+dest_files=[ "res://.import/Y2meta.app - Yeet Sound Effect (128 kbps).mp3-74bebae4e60c38a42b0c5a20f2386069.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

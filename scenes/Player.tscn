@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_walk1.png" type="Texture" id=5]
 [ext_resource path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_walk2.png" type="Texture" id=6]
 [ext_resource path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_jump.png" type="Texture" id=7]
+[ext_resource path="res://assets/Y2meta.app - Yeet Sound Effect (128 kbps).mp3" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -43,6 +44,9 @@ radius = 22.0
 radius = 23.0
 height = 0.0
 
+[sub_resource type="CircleShape2D" id=4]
+radius = 84.119
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
@@ -60,3 +64,19 @@ shape = SubResource( 1 )
 visible = false
 position = Vector2( 0, 32 )
 shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -63.0
+margin_top = -42.0
+margin_right = 80.0
+margin_bottom = -11.0
+text = "Press Esc to YEET enemy
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="pusharea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pusharea"]
+shape = SubResource( 4 )

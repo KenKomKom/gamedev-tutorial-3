@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2meta.app - Body Fall SFX - the classic (128 kbps).mp3-73e753a744c38e387de51393e257675f.mp3str"
+
+[deps]
+
+source_file="res://assets/Y2meta.app - Body Fall SFX - the classic (128 kbps).mp3"
+dest_files=[ "res://.import/Y2meta.app - Body Fall SFX - the classic (128 kbps).mp3-73e753a744c38e387de51393e257675f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

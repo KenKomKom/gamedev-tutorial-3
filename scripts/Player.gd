@@ -11,6 +11,7 @@ var timer_dash_left = 0
 var can_dash=false
 
 onready var animatedAprite = $AnimatedSprite
+onready var push_area = $pusharea
 
 const UP = Vector2(0,-1)
 
@@ -48,7 +49,6 @@ func get_input():
 			velocity.x=speed*-10
 			
 	if Input.is_action_just_released("ui_left"):
-		print("release")
 		timer_dash_left=0.2
 		
 	if Input.is_action_pressed("ui_down"):
@@ -58,7 +58,8 @@ func get_input():
 		animatedAprite.play("fall")
 	elif not is_on_floor() and velocity.y<0:
 		animatedAprite.play("jump")
-
+	if Input.is_action_just_released("ui_cancel"):
+		interact()
 func _process(delta):
 	timer_dash_right-=delta
 	timer_dash_left-=delta
@@ -67,3 +68,10 @@ func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	get_input()
 	velocity = move_and_slide(velocity, UP)
+
+func interact():
+	var around = push_area.get_overlapping_bodies()
+	for e in around:
+		if "robot" in e.name:
+			e.interact(self.global_position)
+	$AudioStreamPlayer.play()

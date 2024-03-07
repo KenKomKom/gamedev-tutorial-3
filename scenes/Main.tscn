@@ -1,18 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/assets_sound_bgm.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/robot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/stone.png" type="Texture" id=5]
 
 [node name="Root" type="Node2D"]
 
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 142, -27 )
+scale = Vector2( 51.9172, 51.9172 )
+texture = ExtResource( 5 )
+
 [node name="Ground" parent="." instance=ExtResource( 1 )]
-position = Vector2( 507.708, 363.86 )
+position = Vector2( 534, 510 )
+
+[node name="Ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 184, 509 )
 
 [node name="Ground2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 789.149, 294.054 )
+position = Vector2( 876, 441 )
 
 [node name="Ground3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 225.95, 294.562 )
+position = Vector2( -157, 444 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 514, 274 )
+
+[node name="robot" parent="." instance=ExtResource( 4 )]
+position = Vector2( 444, 268 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
